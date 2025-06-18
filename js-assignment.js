@@ -99,3 +99,82 @@ function myIncludes(arr, target){
 }
 
 const hasBilly = myIncludes(students, 'Billy')
+console.log("7. myIncludes result: ", hasBilly)
+
+
+// 8 - indexOf()
+let colors = ["pink", "purple", "orange", "blue"];
+
+function myIndexOf(arr, target){
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] === target)
+        return i;
+    }
+    return -1;
+}
+let findPink = myIndexOf(colors, "pink")
+console.log("8. myIndexOf result: ", findPink)
+
+// 9 - push()
+let shapes = ["circle", "square", "rectangle", "octagon"]
+
+function myPush(arr, addOn){
+    arr[arr.length] = addOn
+    return arr;
+}
+
+let addShape = myPush(shapes, "hexagon")
+console.log("9. myPush result: ", addShape)
+
+//10 -lastIndexOf()
+let food = ["rice", "burger", "ackee", "rice", "pizza"]
+
+function myUnshift(arr, lastIndex){
+    for( let i = arr.length - 1; i >= 0; i--){
+        if(arr[i] === lastIndex)
+            return i;
+    }
+    return -1;
+}
+
+let findLastRice = myUnshift(food, "rice")
+console.log("10. myUnshift result: ", findLastRice)
+
+
+//11 - Object.keys()
+let place = {
+    country: 'Jamaica',
+    county: 'Cornwall',
+    parish: 'Hanover',
+    town: 'Lucea'
+};
+
+Object.grabKeys = function(object){
+
+    let keys = [];
+    for( let key in object){
+        if(object.hasOwnProperty(key)){
+            keys.push(key);
+        }
+
+    }
+    return keys;
+}
+console.log("11. grabKeys result: ", Object.grabKeys(place))
+
+//12 - Object.values()
+
+Object.grabValues = function(object){
+
+    let values = [];
+    for( let value in object){
+        if (object.hasOwnProperty(value)) {
+            values.push(object[value]);
+        }
+    }
+    return values;
+}
+
+console.log("12. grabValues result: ", Object.grabValues(place))
+
+
