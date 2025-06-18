@@ -85,3 +85,17 @@ function myReduce(arr, callback){
 
 let total = myReduce(nums, (acc, curr) => acc + curr)
 console.log("6. myReduce result (total sum):", total)
+
+// 7 - includes()
+
+const students = ['Bob', 'Billy', 'Bianca', 'Brenda'];
+
+function myIncludes(arr, target){
+ for (let i = 0; i < arr.length; i++){
+    if (arr[i]=== target)
+    return true;
+ }
+ return false;
+}
+
+const hasBilly = myIncludes(students, 'Billy')
